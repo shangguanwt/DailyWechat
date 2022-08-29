@@ -49,7 +49,7 @@ def get_birthday(birthday):
 client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 
-f = open("./users_info.json", encoding="utf-16")
+f = open("./users_info.json", encoding="utf-8")
 js_text = json.load(f)
 f.close()
 data = js_text['data']
@@ -65,19 +65,19 @@ for user_info in data:
 
     data = dict()
     data['time'] = {
-        'value': get_time(), 
+        'value': get_time(),
         'color':'#470024'
         }
     data['words'] = {
-        'value': get_words(), 
+        'value': get_words(),
         'color': get_random_color()
         }
     data['weather'] = {
-        'value': weather['wea'], 
+        'value': weather['wea'] ,
         'color': '#002fa4'
         }
     data['city'] = {
-        'value': city, 
+        'value': city,
         'color': get_random_color()
         }
     data['tem_high'] = {
@@ -85,11 +85,11 @@ for user_info in data:
         'color': '#D44848'
         }
     data['tem_low'] = {
-        'value': weather['tem2'], 
+        'value': weather['tem2'],
         'color': '#01847F'
         }
     data['born_days'] = {
-        'value': get_count(born_date), 
+        'value': get_count(born_date) ,
         'color': get_random_color()
         }
     data['birthday_left'] = {
@@ -101,7 +101,7 @@ for user_info in data:
         'color': get_random_color()
         }
     data['wind'] = {
-        'value': weather['win'][0], 
+        'value': weather['win'][1], 
         'color': get_random_color()
         }
     data['name'] = {
