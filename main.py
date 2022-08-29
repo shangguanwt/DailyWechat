@@ -76,9 +76,9 @@ for user_info in data:
         'value': weather['wea'], 
         'color': '#002fa4'
         }
-    data['city'] = {
-        'value': city, 
-        'color': get_random_color()
+    #data['city'] = {
+      #  'value': city, 
+      #  'color': get_random_color()
         }
     data['tem_high'] = {
         'value': weather['tem1'], 
@@ -87,31 +87,31 @@ for user_info in data:
     data['tem_low'] = {
         'value': weather['tem2'], 
         'color': '#01847F'
-        }
-    data['born_days'] = {
-        'value': get_count(born_date), 
-        'color': get_random_color()
-        }
-    data['birthday_left'] = {
-        'value': get_birthday(birthday), 
-        'color': get_random_color()
-        }
-    data['air'] = {
-        'value': weather['air_level'], 
-        'color': get_random_color()
-        }
-    data['wind'] = {
-        'value': weather['win'][1], 
-        'color': get_random_color()
-        }
+      #  }
+   # data['born_days'] = {
+     #   'value': get_count(born_date), 
+     #   'color': get_random_color()
+     #   }
+   # data['birthday_left'] = {
+      #  'value': get_birthday(birthday), 
+      #  'color': get_random_color()
+       # }
+    #data['air'] = {
+     #   'value': weather['air_level'], 
+       # 'color': get_random_color()
+       # }
+    #data['wind'] = {
+    #    'value': weather['win'][1], 
+     #   'color': get_random_color()
+       3 }
     data['name'] = {
         'value': name, 
         'color': get_random_color()
         }
-    data['uv'] = {
-        'value': weather['uvDescription'], 
-        'color': get_random_color()
-        }
+    #data['uv'] = {
+       # 'value': weather['uvDescription'], 
+       # 'color': get_random_color()
+     #   }
     
     res = wm.send_template(user_id, template_id, data,'https://froan.cn')
     print(res)
