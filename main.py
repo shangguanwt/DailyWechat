@@ -69,8 +69,7 @@ for user_info in data:
         'color':'#470024'
         }
     data['words'] = {
-        'value': get_words(),
-        'color': get_random_color()
+        'value': get_words()
        
         }
     data['weather'] = {
@@ -82,12 +81,10 @@ for user_info in data:
         
         }
     data['tem_high'] = {
-        'value': weather['tem1'], 
-        'color': '#D44848'
+        'value': weather['tem1']
         }
     data['tem_low'] = {
-        'value': weather['tem2'],
-        'color': '#01847F'
+        'value': weather['tem2']
         }
     data['born_days'] = {
         'value': get_count(born_date) 
