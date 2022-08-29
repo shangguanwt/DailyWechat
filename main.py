@@ -79,7 +79,7 @@ for user_info in data:
     #data['city'] = {
       #  'value': city, 
       #  'color': get_random_color()
-        }
+       # }
     data['tem_high'] = {
         'value': weather['tem1'], 
         'color': '#D44848'
