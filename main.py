@@ -6,6 +6,9 @@ import requests
 import os
 import random
 import json
+from zhdate import ZhDate
+
+ 
 
 nowtime = datetime.utcnow() + timedelta(hours=8)  
 today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d")
