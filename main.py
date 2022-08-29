@@ -69,8 +69,8 @@ for user_info in data:
         'color':'#470024'
         }
     data['words'] = {
-        'value': get_words(),
-        'color': get_random_color()
+        'value': get_words()
+       
         }
     data['weather'] = {
         'value': weather['wea'] ,
@@ -89,28 +89,28 @@ for user_info in data:
         'color': '#01847F'
         }
     data['born_days'] = {
-        'value': get_count(born_date) ,
-        'color': get_random_color()
+        'value': get_count(born_date) 
+        
         }
     data['birthday_left'] = {
-        'value': get_birthday(birthday), 
-        'color': get_random_color()
+        'value': get_birthday(birthday)
+        
         }
     data['air'] = {
-        'value': weather['air_level'], 
-        'color': get_random_color()
+        'value': weather['air_level']
+        
         }
     data['wind'] = {
-        'value': weather['win'][1], 
-        'color': get_random_color()
+        'value': weather['win'][1]
+        
         }
     data['name'] = {
         'value': name, 
         'color': get_random_color()
         }
     data['uv'] = {
-        'value': weather['uvDescription'], 
-        'color': get_random_color()
+        'value': weather['uvDescription']
+        
         }
     
     res = wm.send_template(user_id, template_id, data,'https://froan.cn')
