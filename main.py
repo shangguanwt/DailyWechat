@@ -103,7 +103,7 @@ for user_info in data:
     #data['wind'] = {
     #    'value': weather['win'][1], 
      #   'color': get_random_color()
-       3 }
+      #}
     data['name'] = {
         'value': name, 
         'color': get_random_color()
