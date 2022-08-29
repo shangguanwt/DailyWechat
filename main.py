@@ -39,7 +39,7 @@ def get_weather(city):
     return weather
 
 def get_count(born_date):
-    delta = today - datetime.strptime(born_date, "%Y-%m-%d")
+    delta = today - datetime.strptime(born_date, "r%Y-%m-%d")
     return delta.days
 
 
