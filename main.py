@@ -27,7 +27,7 @@ def get_words():
     return words.json()['data']['text']
 
 def get_random_color():
-    return "#%06x" % random.randint(2, 0xFFFFFF)
+    return "#%06x" % random.randint(8, 0xFFFFFF)
 
 def get_weather(city):
     url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
@@ -76,10 +76,10 @@ for user_info in data:
         'value': weather['wea'], 
         'color': '#002fa4'
         }
-    #data['city'] = {
-      #  'value': city, 
-      #  'color': get_random_color()
-       # }
+    data['city'] = {
+        'value': city, 
+        'color': get_random_color()
+        }
     data['tem_high'] = {
         'value': weather['tem1'], 
         'color': '#D44848'
@@ -88,30 +88,30 @@ for user_info in data:
         'value': weather['tem2'], 
         'color': '#01847F'
         }
-   # data['born_days'] = {
-     #   'value': get_count(born_date), 
-     #   'color': get_random_color()
-     #   }
-   # data['birthday_left'] = {
-      #  'value': get_birthday(birthday), 
-      #  'color': get_random_color()
-       # }
-    #data['air'] = {
-     #   'value': weather['air_level'], 
-       # 'color': get_random_color()
-       # }
-    #data['wind'] = {
-    #    'value': weather['win'][1], 
-     #   'color': get_random_color()
-      #}
+    data['born_days'] = {
+        'value': get_count(born_date), 
+        'color': get_random_color()
+        }
+    data['birthday_left'] = {
+        'value': get_birthday(birthday), 
+        'color': get_random_color()
+        }
+    data['air'] = {
+        'value': weather['air_level'], 
+        'color': get_random_color()
+        }
+    data['wind'] = {
+        'value': weather['win'][0], 
+        'color': get_random_color()
+        }
     data['name'] = {
         'value': name, 
         'color': get_random_color()
         }
-    #data['uv'] = {
-       # 'value': weather['uvDescription'], 
-       # 'color': get_random_color()
-     #   }
+    data['uv'] = {
+        'value': weather['uvDescription'], 
+        'color': get_random_color()
+        }
     
     res = wm.send_template(user_id, template_id, data,'https://froan.cn')
     print(res)
