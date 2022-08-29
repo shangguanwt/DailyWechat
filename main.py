@@ -87,7 +87,7 @@ for user_info in data:
     data['tem_low'] = {
         'value': weather['tem2'], 
         'color': '#01847F'
-      #  }
+        }
    # data['born_days'] = {
      #   'value': get_count(born_date), 
      #   'color': get_random_color()
