@@ -69,16 +69,17 @@ for user_info in data:
         'color':'#470024'
         }
     data['words'] = {
-        'value': get_words()
+        'value': get_words(),
+        'color': get_random_color()
        
         }
     data['weather'] = {
-        'value': weather['wea'] ,
-        'color': '#002fa4'
+        'value': weather['wea'] 
+        
         }
     data['city'] = {
-        'value': city,
-        'color': get_random_color()
+        'value': city
+        
         }
     data['tem_high'] = {
         'value': weather['tem1'], 
