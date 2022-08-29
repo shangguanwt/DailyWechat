@@ -49,7 +49,7 @@ def get_birthday(birthday):
 client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 
-f = open("./users_info.json", encoding="utf-8")
+f = open("./users_info.json", encoding="utf-16")
 js_text = json.load(f)
 f.close()
 data = js_text['data']
