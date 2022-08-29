@@ -115,5 +115,5 @@ for user_info in data:
     
     res = wm.send_template(user_id, template_id, data,'https://froan.cn')
     print(res)
-    num += 1
+    num += 4
 print(num)
