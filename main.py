@@ -27,7 +27,7 @@ def get_words():
     return words.json()['data']['text']
 
 def get_random_color():
-    return "#%06x" % random.randint(0, 0xFFFFFF)
+    return "#%06x" % random.randint(2, 0xFFFFFF)
 
 def get_weather(city):
     url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
@@ -101,7 +101,7 @@ for user_info in data:
         'color': get_random_color()
         }
     data['wind'] = {
-        'value': weather['win'][0], 
+        'value': weather['win'][1], 
         'color': get_random_color()
         }
     data['name'] = {
