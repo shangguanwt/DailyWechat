@@ -43,7 +43,7 @@ def get_weather(city):
 def get_index(city):
     url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
     ress = requests.get(url).json()
-    weather = ress['index'][0]
+    index = ress['index'][0]
     return index
 
 
@@ -74,6 +74,7 @@ for user_info in data:
     name=' 【'+user_info['user_name'].upper()+'】 '
     
     weather= get_weather(city)
+    index= get_index(city)
 
     data = dict()
     data['time'] = {
