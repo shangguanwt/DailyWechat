@@ -110,7 +110,7 @@ for user_info in data:
         'value': weather['wea_img']
         }
     
-    #res = wm.send_template(user_id, template_id, data,'https://froan.cn')
-    #print(res)
-    #num += 4
+    res = wm.send_template(user_id, template_id, data)
+    print(res)
+    num += 4
 #print(num)
