@@ -73,7 +73,7 @@ for user_info in data:
         'value': get_words()
         }
     data['weather'] = {
-        'value': weather['phrase']
+        'value': weather['narrative']
         }
     data['city'] = {
         'value': city
@@ -102,12 +102,6 @@ for user_info in data:
         }
     data['uv'] = {
         'value': weather['uvDescription']
-        }
-    data['rains'] = {
-        'value': weather['rain']
-        }
-    data['weaimg'] = {
-        'value': weather['wea_img']
         }
     
     res = wm.send_template(user_id, template_id, data)
