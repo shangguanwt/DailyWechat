@@ -34,16 +34,12 @@ def get_weather(city):
     res = requests.get(url).json()
     weather = res['data'][0]
     return weather
-def get_weather(city):
-    url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
-    res = requests.get(url).json()
-    weather = res['data'][0]
-    return weather
+
 
 def get_index(city):
     url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
     ress = requests.get(url).json()
-    index = ress['index'][0]
+    index = ress['index']
     return index
 
 
