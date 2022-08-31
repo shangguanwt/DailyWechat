@@ -36,13 +36,6 @@ def get_weather(city):
     return weather
 
 
-def get_index(city):
-    url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
-    ress = requests.get(url).json()
-    index = ress['index']
-    return index
-
-
 def get_count(born_date):
     delta = today - datetime.strptime(born_date, "%Y-%m-%d")
     return delta.days
@@ -70,7 +63,6 @@ for user_info in data:
     name=' 【'+user_info['user_name'].upper()+'】 '
     
     weather= get_weather(city)
-    index= get_index(city)
 
     data = dict()
     data['time'] = {
@@ -114,11 +106,6 @@ for user_info in data:
     data['rains'] = {
         'value': weather['rain']
         }
-    data['levels'] = {
-        'value': index['level']
-        }
-    data['descs'] = {
-        'value': index['desc']
         }
     data['weaimg'] = {
         'value': weather['wea_img']
