@@ -73,7 +73,7 @@ for user_info in data:
         'value': get_words()
         }
     data['weather'] = {
-        'value': weather['narrative']
+        'value': weather['phrase']
         }
     data['city'] = {
         'value': city
