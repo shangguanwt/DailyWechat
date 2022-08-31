@@ -106,7 +106,6 @@ for user_info in data:
     data['rains'] = {
         'value': weather['rain']
         }
-        }
     data['weaimg'] = {
         'value': weather['wea_img']
         }
