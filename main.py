@@ -70,15 +70,12 @@ for user_info in data:
         }
     data['words'] = {
         'value': get_words()
-       
         }
     data['weather'] = {
-        'value': weather['wea'] 
-        
+        'value': weather['phrase']
         }
     data['city'] = {
         'value': city
-        
         }
     data['tem_high'] = {
         'value': weather['tem1']
@@ -88,19 +85,15 @@ for user_info in data:
         }
     data['born_days'] = {
         'value': get_count(born_date) 
-        
         }
     data['birthday_left'] = {
         'value': get_birthday(birthday)
-        
         }
     data['air'] = {
         'value': weather['air_level']
-        
         }
     data['wind'] = {
         'value': weather['win'][1]
-        
         }
     data['name'] = {
         'value': name, 
@@ -108,10 +101,21 @@ for user_info in data:
         }
     data['uv'] = {
         'value': weather['uvDescription']
-        
+        }
+    data['rains'] = {
+        'value': weather['rain']
+        }
+    data['levels'] = {
+        'value': weather['level']
+        }
+    data['descs'] = {
+        'value': weather['desc']
+        }
+    data['weaimg'] = {
+        'value': weather['wea_img']
         }
     
-    res = wm.send_template(user_id, template_id, data,'https://froan.cn')
-    print(res)
-    num += 4
-print(num)
+    #res = wm.send_template(user_id, template_id, data,'https://froan.cn')
+    #print(res)
+    #num += 4
+#print(num)
