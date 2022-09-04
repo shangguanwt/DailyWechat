@@ -30,7 +30,7 @@ def get_random_color():
     return "#%06x" % random.randint(8, 0xFFFFFF)
 
 def get_weather(city):
-    url = "https://geoapi.qweather.com/v2/city/lookup?location={}&key={}".format(city,ef362bd9789844928d8cf45ebb9f53e5)
+    url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
     res = requests.get(url).json()
     weather = res['data'][0]
     return weather
