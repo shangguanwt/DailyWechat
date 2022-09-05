@@ -103,7 +103,9 @@ for user_info in data:
     data['uv'] = {
         'value': weather['uvDescription']
         }
-    
+    data['alarmcontent'] = {
+        'value': weather['alarm_content']
+        }
     res = wm.send_template(user_id, template_id, data)
     print(res)
     num += 4
