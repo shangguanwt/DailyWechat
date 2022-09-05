@@ -33,7 +33,7 @@ def get_weather(city):
     url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
     res = requests.get(url).json()
     weather = res['data'][0]
-    alar = res['alarm[]'][0]
+    alar = res['alarm'][0]
     return weather,alar
 
 
