@@ -91,7 +91,7 @@ for user_info in data:
         'value': get_birthday(birthday)
         }
     data['air'] = {
-        'value': weather['air_level']
+        'value': weather['air_tips']
         }
     data['wind'] = {
         'value': weather['win'][1]
@@ -103,9 +103,9 @@ for user_info in data:
     data['uv'] = {
         'value': weather['uvDescription']
         }
-    data['alarmcontent'] = {
-        'value': weather['alarm_level']
-        }
+    #data['alarmcontent'] = {
+      #  'value': weather['alarm_level']
+    #    }
     res = wm.send_template(user_id, template_id, data)
     print(res)
     num += 4
