@@ -33,7 +33,8 @@ def get_weather(city):
     url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&city=" + city
     res = requests.get(url).json()
     weather = res['data'][0]
-    return weather
+    alar = res['alarm[]'][0]
+    return weather,alar
 
 
 def get_count(born_date):
@@ -91,7 +92,7 @@ for user_info in data:
         'value': get_birthday(birthday)
         }
     data['air'] = {
-        'value': weather['air_tips']
+        'value': weather['air_level']
         }
     data['wind'] = {
         'value': weather['win'][1]
@@ -103,9 +104,10 @@ for user_info in data:
     data['uv'] = {
         'value': weather['uvDescription']
         }
-    #data['alarmcontent'] = {
-      #  'value': weather['alarm_level']
-    #    }
+    
+    data['alarmcontent'] = {
+        'value': weather['alarm_level']
+        }
     res = wm.send_template(user_id, template_id, data)
     print(res)
     num += 4
